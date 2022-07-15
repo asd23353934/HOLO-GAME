@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <p id="title_">holo倖存者</p>
+        <div id="randomBoost"></div>
+        <div id="showEsc">
+            <button id="showEsc_continue" onclick="stop()">繼續遊戲</button>
+            <button id="showEsc_finish"   onclick="deathBack_()">返回主選單</button>
+        </div>
+        <ul id="shop_all">
+            <li id="shop_home" onclick="onHome()">首頁</li>
+            <li id="shop_play" onclick="onPlay()">人物</li>
+            <li id="shop_skill"onclick="onSkill()">技能</li>
+            <li id="shopMark"></li>
+            <li id="smallMark"></li>
+        </ul>
+        <div id="bloodVolume">
+            <div id="blood_volume"></div>
+        </div>
+        <p id="show_en">殺敵數 <br><span id="kill_num">0</span></p>
+        <p id="show_time">時間 <br> <span id="time_h">00</span>:<span id="time_m">00</span>:<span id="time_s">00</span></p>
+        
+        <p id="show_money">金錢 <br> <span id="money">0</span></p>
+        <div id="death">
+            <p style="text-align: center;font-size: 50px;margin-top: 20px;">你死了</p>
+            <button id="deathBack" onclick="deathBack_()">返回主選單</button>
+        </div>
+        <div id="player">
+            <div id="introduce">
+                <div id="introduce_img">
+                    <img id="gura" src="OIP (1).jpg" alt="">
+                    <img id="ame" src="OIP (2).jpg" alt="">
+                    <img id="kiara" src="OIP (4).jpg" alt="">
+                    <img id="ina" src="OIP.jpg" alt="">
+                    <img id="mori" src="R.png" alt="">
+                </div>
+                <div id="introduce_p">
+                    <p id="introduce_name" style="z-index: 50;">姓名 :
+                        <span id="introduce_gura_sp"></span>
+                        <span id="introduce_ame_sp"></span>
+                        <span id="introduce_kiara_sp"></span>
+                        <span id="introduce_ina_sp"></span>
+                        <span id="introduce_mori_sp"></span>
+                    </p>
+                    <p id="introduce_context" style="z-index: 50;">介紹 : 
+                        <span id="introduce_context_gura"></span>
+                        <span id="introduce_context_ame"></span>
+                        <span id="introduce_context_kiara"></span>
+                        <span id="introduce_context_ina"></span>
+                        <span id="introduce_context_mori"></span>
+                    </p>
+                </div>
+            </div>
+            <div id="player_ch">
+                <div id="player_ch_00" onclick="mouse_gura_up()"><img id="player_img_00" src="OIP (1).jpg" ></div>
+                <div id="player_ch_01" onclick="mouse_ame_up()"><img id="player_img_01" src="OIP (2).jpg" ></div>
+                <div id="player_ch_02" onclick="mouse_kiara_up()"><img id="player_img_02" src="OIP (4).jpg" ></div>
+                <div id="player_ch_03" onclick="mouse_ina_up()"><img id="player_img_03" src="OIP.jpg" ></div>
+                <div id="player_ch_04" onclick="mouse_mori_up()"><img id="player_img_04" src="R.png" ></div>
+                <div id="player_ch_05"><img id="player_img_05" src="" ></div>
+                <div id="player_ch_06"><img id="player_img_06" src="" ></div>
+                <div id="player_ch_07"><img id="player_img_07" src="" ></div>
+            </div>
+            <p id="play_err">尚未解鎖</p>
+            <button id="ok" onclick="ok_()">確定</button>
+            <button id="esc" onclick="esc_()">X</button>
+        </div>
+        <div id="shop_">
+            <div id="shopHome">
+                    <li id="shop_home_1">
+                        <h1 style="text-align: center;">所有人物限時特價</h1>
+                        <p style="text-align: center;"><s>50塊</s></p><br>
+                        <p style="text-align: center;">100塊</p>
+                    </li>
+                    <li id="shop_home_2">
+                        <h1 style="text-align: center;">所有技能限時特價</h1>
+                        <p style="text-align: center;"><s>50塊</s></p><br>
+                        <p style="text-align: center;">100塊</p>
+                    </li>
+                <div id="small1" onclick="carouselSmall_1()"></div>
+                <div id="small2" onclick="carouselSmall_2()"></div>
+            </div>
+            <div id="shopPlay" onmouseout="shop_out()">
+                <p id="shopPlay_p">金錢: <span id="shopPlay_money_play">0</span></p>
+                
+                <ul id="shop_Play">
+                    <li id="Play1" onmouseover="shopPlay_choose(1)" onmousedown="shopPlay_click(1)" onmouseout="shopPlay_out()">
+                        <img draggable="false" id="imgPlay1" src="OIP (1).jpg" alt="">
+                        <div id="buyplay1"></div>
+                    </li>
+                    <li id="Play2" onmouseover="shopPlay_choose(2)" onmousedown="shopPlay_click(2)" onmouseout="shopPlay_out()">
+                        <img draggable="false" id="imgPlay2" src="OIP (2).jpg" alt="">
+                        <div id="buyplay2"></div>
+                    </li>
+                    <li id="Play3" onmouseover="shopPlay_choose(3)" onmousedown="shopPlay_click(3)" onmouseout="shopPlay_out()">
+                        <img draggable="false" id="imgPlay3" src="OIP (4).jpg" alt="">
+                        <div id="buyplay3"></div>
+                    </li>
+                    <li id="Play4" onmouseover="shopPlay_choose(4)" onmousedown="shopPlay_click(4)" onmouseout="shopPlay_out()">
+                        <img draggable="false" id="imgPlay4" src="OIP.jpg" alt="">
+                        <div id="buyplay4"></div>
+                    </li>
+                    <li id="Play5" onmouseover="shopPlay_choose(5)" onmousedown="shopPlay_click(5)" onmouseout="shopPlay_out()">
+                        <img draggable="false" id="imgPlay5" src="R.png" alt="">
+                        <div id="buyplay5"></div>
+                    </li>
+                </ul>
+                <div id="shopShow_skill"></div>
+            </div>
+            <div id="shopSkill">
+                <p id="shopPlay_p">金錢: <span id="shopPlay_money_skill">0</span></p>
+                <ul id="shop_Skill_ul"></ul>    
+                <ul id="playAll_skill">
+                    <li id="playAll_skill1" onmousedown="playAll_skill_click(1)" onmouseover="playAll_skill_over(1)" onmouseout="playAll_skill_out()">
+                        <img id="playAll_skill_img1" src="OIP (1).jpg" alt="">
+                    </li>
+                    <li id="playAll_skill2" onmousedown="playAll_skill_click(2)" onmouseover="playAll_skill_over(2)" onmouseout="playAll_skill_out()">
+                        <img id="playAll_skill_img2" src="OIP (2).jpg" alt="">
+                    </li>
+                    <li id="playAll_skill3" onmousedown="playAll_skill_click(3)" onmouseover="playAll_skill_over(3)" onmouseout="playAll_skill_out()">
+                        <img id="playAll_skill_img3" src="OIP (4).jpg" alt="">
+                    </li>
+                    <li id="playAll_skill4" onmousedown="playAll_skill_click(4)" onmouseover="playAll_skill_over(4)" onmouseout="playAll_skill_out()">
+                        <img id="playAll_skill_img4" src="OIP.jpg" alt="">
+                    </li>
+                    <li id="playAll_skill5" onmousedown="playAll_skill_click(5)" onmouseover="playAll_skill_over(5)" onmouseout="playAll_skill_out()">
+                        <img id="playAll_skill_img5" src="R.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <button id="shop_esc" onclick="esc_shop()">X</button>
+        </div> 
+        <div id="buyCk">
+            <p id="buyCk_p">總價:<span id="buyCk_sp">0</span>元</p>
+            <button onclick="buyCk_K()" id="buyCk_ok">確認</button>
+            <button onclick="buyck_N()" id="buyCk_no">X</button>
+        </div>
+        <div id="buyCk1">
+            <p id="buyCk_p1">總價:<span id="buyCk_sp1">0</span>元</p>
+            <button onclick="buyCk_KK()" id="buyCk_ok1">確認</button>
+            <button onclick="buyck_NN()" id="buyCk_no1">X</button>
+        </div>
+        <div id="buy_err">
+            <p id="buy_err_p">錢勒</p>
+            <button id="buy_err_btu" onclick="errEsc()">挖謀吉</button>
+        </div>
+        <div id="buy_err1">
+            <p id="buy_err_p1">有了啦</p>
+            <button id="buy_err_btu1" onclick="errEsc_play()">好喔</button>
+        </div>
+        <div id="skillIntroduce"></div>
+        <div id="shopSkill_introduce"></div>
+        <button id="choose" onclick="btn_()">開始</button>
+        <button id="shop" onclick="openShop()">商店</button>
+        <div id="env">
+            <img id="envir" src="envir.png" alt="">
+        </div>
+        <div id="skill01"></div>
+        <div id="skill02"></div>
+        <div id="skill03"></div>
+        <div id="skill04"></div>
+        <div id="skill_all"></div>
+        <div id="randomBoost_lvl">
+            <p id="randomBoost_lvl_p">等級 <span id="randomBoost_lvl_sp">1</span></p>
+            <div id="randomBoostLVL"></div>
+        </div>
+        <div id="showSkill">
+            <p id="show_skill">技能 <span id="skill_num">1</span></p>
+            <div id="showSkillLVL"></div>
+        </div>
+        <div id="SKILL_LIST"></div>
+        <div id="playCurrent"></div>
+        <div id="degreeOf_difficulty">
+            <button id="degreeOf_difficulty_ESC" onclick="degreeOfESC()">X</button>
+            <p id="degreeOf_difficulty_p">選擇難易度</p>
+            <button id="degreeOf_difficulty_ch1" onclick="degreeOf(1)">普通模式</button>
+            <button id="degreeOf_difficulty_ch2" onclick="degreeOf(2)">練習模式</button>
+        </div>
+        <div id="skillNUM">
+            <p id="skillNUM_p">技能點</p><br>
+            <p id="skillNUM_sp">0</p>
+        </div>
+        <canvas id="show_atk"></canvas>
+        <canvas id="enemyATK"></canvas>
+        <canvas id="can"></canvas>
+        <canvas id="can0"></canvas>
+        <canvas id="can0_1"></canvas>
+        <canvas id="can0_2"></canvas>
+        <canvas id="can0_3"></canvas>
+        <canvas id="can0_3_1"></canvas>
+        <canvas id="can0_4"></canvas>
+        <canvas id="can0_4_1"></canvas>
+        <canvas id="can1"></canvas>
+        <canvas id="can2"></canvas>
+        <canvas id="can3"></canvas>
+        <canvas id="can4_1"></canvas>
+        <canvas id="can4_2"></canvas>
+    </div>
+    <p class="err">請在1920 X 1080解析度遊玩</p>
+    <button id="stop" onclick="stop()">ESC</button>
+    <script src="keydown.js"></script>
+    <script src="enemy_atk.js"></script>
+    <script src="enemy_run.js"></script>
+    <script src="enemy_ch.js"></script>
+    <script src="run.js"></script>
+    <script src="guraAtk1.js"></script>
+    <script src="guraAtk2.js"></script>
+    <script src="guraAtk3.js"></script>
+    <script src="guraAtk4.js"></script>
+    <script src="moriAtk1.js"></script>
+    <script src="moriAtk2.js"></script>
+    <script src="moriAtk3.js"></script>
+    <script src="moriAtk4.js"></script>
+    <script src="time.js"></script>
+    <script src="start.js"></script>
+    <script src="skill.js"></script>
+    <script src="mouse.js"></script>
+    <script src="stop.js"></script>
+    <script src="shop.js"></script>
+    <script src="show_atk.js"></script>
+    <script src="music.js"></script>
+    <script src="randomBoost.js"></script>
+</body>
+
+</html>

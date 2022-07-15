@@ -1,0 +1,1131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+li{
+    list-style-type: none;
+}
+p{
+    font-size: 25px;
+    line-height: 50px;
+}
+body{
+    overflow: hidden;
+    background-color: rgba(1, 208, 245, 0.747);
+}
+div#skillNUM{
+    display: none;
+    position: absolute;
+    top: 88%;
+    left: 35%;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 5%;
+    height: 10%;
+    background-color: rgba(240, 248, 255, 0.37);
+}
+p#skillNUM_p , p#skillNUM_sp{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+p#skillNUM_sp{
+    font-size: 40px;
+}
+div#degreeOf_difficulty{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 15%;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+}
+p#degreeOf_difficulty_p{
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+button#degreeOf_difficulty_ch1 , button#degreeOf_difficulty_ch2 , button#degreeOf_difficulty_ESC{
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    width: 80%;
+    height: 20%;
+    font-size: 40px;
+}
+button#degreeOf_difficulty_ch2{
+    top: 45%;
+}
+button#degreeOf_difficulty_ESC{
+    width: 15%;
+    height: 15%;
+    top: -5%;
+    left: 92%;
+}
+div#SKILL_LIST{
+    display: none;
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    width: 10%;
+    height: 40%;
+    text-align: center;
+}
+div#SKILL_LIST1,div#SKILL_LIST2,div#SKILL_LIST3,div#SKILL_LIST4{
+position: absolute;
+top: 0%;
+left: 0%;
+width: 50%;
+height: 25%;
+}
+div#SKILL_LIST2{
+    top: 40%;
+}
+div#SKILL_LIST3{
+    top: 80%;
+}
+div#SKILL_LIST4{
+    top: 120%;
+}
+img#SKILL_LIST1_img,img#SKILL_LIST2_img,img#SKILL_LIST3_img,img#SKILL_LIST4_img{
+    width: 100%;
+    height: 100%;
+}
+p#SKILL_LIST1_p_1,p#SKILL_LIST2_p_1,p#SKILL_LIST3_p_1,p#SKILL_LIST4_p_1{
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+}
+p#SKILL_LIST1_p_2,p#SKILL_LIST2_p_2,p#SKILL_LIST3_p_2,p#SKILL_LIST4_p_2{
+    position: absolute;
+    top: 20%;
+    left: 110%;
+    width: 100%;
+    height: 50%;
+    font-size: 50px;
+    box-shadow: 0 0 5px 0 black;
+}
+button#stop{
+    display: none;
+    position: absolute;
+    top: -0.1%;
+    left: -0.1%;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    z-index: 15;
+}
+div#showEsc{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 44.5%;
+    background-color: white;
+    width: 15%;
+    height: 20%;
+    border-radius: 20px;
+    z-index: 10;
+    border: 3px solid black;
+}
+button#showEsc_continue , button#showEsc_finish{
+    position: absolute;
+    top: 8%;
+    left: 14.5%;
+    width: 70%;
+    height: 40%;
+    font-size: 25px;
+    text-align: center;
+}
+button#showEsc_finish{
+    top: 55%;
+}
+div#randomBoost{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 39.5%;
+    width: 25%;
+    height: 60%;
+    background-color: rgb(0, 126, 98);
+    z-index: 10;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 0 8px 0 black;
+}
+div#randomBoost_instruct1 , div#randomBoost_instruct2 , div#randomBoost_instruct3{
+    position: absolute;
+    top: 200%;
+    left: -30%;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border: 5px solid black;
+    background-color: white;
+    box-shadow: 0 0 5px 0 black;
+    transition: all 0.1s ease-in;
+}
+p#randomBoost_instruct1_p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 25%;
+    font-size: 70px;
+}
+div#randomBoost_instruct1_mark{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 20px solid;
+    border-color: transparent transparent transparent rgb(230, 144, 144);
+    top: 27%;
+    left: 130%;
+    animation-name: randomBoostMark;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: inherit;
+}
+@keyframes randomBoostMark{
+    0%{
+        left: 130%;
+    }
+    100%{
+        left: 115%;
+    }
+}
+div#randomBoost_title{
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+}
+div#randomBoost_0 , div#randomBoost_1 , div#randomBoost_2{
+    position: absolute;
+    top: 15%;
+    /* left: 5%; */
+    left: -250%;
+    width: 90%;
+    height: 20%;
+    background-color: rgb(0, 195, 255);
+    border: 10px solid rgba(201, 245, 7, 0.363);
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+    z-index: 10;
+}
+div#randomBoost_1{
+    top: 45%;
+    left: 250%;
+}
+div#randomBoost_2{
+    top: 75%
+}
+p#randomBoost_p{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+
+}
+img#randomBoost_img{
+    width: 50px;
+    height: 50px;
+    margin: 5%;
+}
+P#title_{
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 43.8%;
+    font-size: 70px;
+    z-index: 10
+}
+div#bloodVolume,div#randomBoost_lvl,div#showSkill{
+    display: none;
+    position: absolute;
+    top: 500px;
+    left: 900px;
+    width: 100px;
+    height: 10px;
+    outline: 3px solid black;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+div#randomBoost_lvl,div#showSkill{
+    top: 90%;
+    left: 10%;
+    width: 24%;
+}
+div#showSkill{
+    top: 96%;
+}
+div#blood_volume,div#randomBoostLVL , div#showSkillLVL{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(181, 240, 45);
+    z-index: 10;
+}
+div#blood_volume{
+    background-color:red;
+}
+div#randomBoostLVL{
+    width:0%;
+    background-color: rgb(25, 139, 231);
+}
+div#showSkillLVL{
+    width:0%;
+}
+p#randomBoost_lvl_p , p#show_skill{
+    position: absolute;
+    top: -500%;
+    left: 0;
+}
+div#playCurrent{
+    display: none;
+    position: absolute;
+    top: 78%;
+    left: 1%;
+    width: 8%;
+    height: 16%;
+    box-shadow: 0 0 10px 0 black;
+    background-color: white;
+}
+img#playCurrent_img{
+    width: 100%;
+    height: 100%;
+}
+img#playCurrentHP{
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    top: 92%;
+    left: -10%;
+}
+p#playCurrent_p{
+    position:absolute;
+    top: 100%;
+    left: 33%;
+    text-align: center;
+    font-size: 50px;
+}
+div#death{
+    display: none;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 400px;
+    left: 830px;
+    background-color: white;
+    border-radius: 30px;
+    border: 5px solid black;
+    box-shadow: 0 0 5px 0 black;
+    z-index: 10;
+}
+
+button#deathBack{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    left: 68px;
+    font-size: 20px;
+}
+
+div#player{
+    display: none;
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 black;
+    border-radius: 10px;
+    position: absolute;
+    top: -730px;
+    left: 25%;
+    z-index: 3;
+    transition: all 1s ease;
+}
+
+div#introduce{
+    display: block;
+    background-color: rgb(184, 127, 127);
+    width: 35%;
+    height: 100%;
+    border-right:3px solid black;
+    border-radius: 9px 0 0 9px;
+}
+div#introduce_img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border: 3px solid black;
+    box-shadow: 0 0 10px 0 black;
+}
+img#gura , img#ame , img#kiara , img#ina , img#mori{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+div#introduce_p{
+    display: block;
+    width: 250px;
+    height: 330px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    border: 3px solid black;
+    box-shadow: 0 0 10px 0 black;
+    overflow: hidden;
+}
+div#player_ch{
+    display: block;
+    width: 600px;
+    height: 510px;
+    background-color: white;
+    position: relative;
+    top: -600px;
+    left: 370px;
+    border: 3px solid black;
+    box-shadow: 0 0 5px 0 black;
+    z-index: 0;
+}
+div#player_ch_00 ,div#player_ch_01 ,div#player_ch_02 ,div#player_ch_03 ,
+div#player_ch_04 ,div#player_ch_05 ,div#player_ch_06 ,div#player_ch_07{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 15px 0 black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid rgba(81, 82, 79, 0.788);
+    transform: scale(1,1) ;
+    transition: all 0.5s ease;
+}
+div#player_ch_00 , div#player_ch_01 , div#player_ch_02 ,div#player_ch_03{
+    top: 10px;
+}
+div#player_ch_04 , div#player_ch_05 , div#player_ch_06 ,div#player_ch_07{
+    top: 150px;
+}
+div#player_ch_00 , div#player_ch_04{
+    left: 30px;
+}
+div#player_ch_01 , div#player_ch_05{
+    left: 170px;
+}
+div#player_ch_02 , div#player_ch_06{
+    left: 310px;
+}
+div#player_ch_03 , div#player_ch_07{
+    left: 450px;
+}
+div#player_ch_00:hover ,div#player_ch_01:hover ,div#player_ch_02:hover ,div#player_ch_03:hover ,
+div#player_ch_04:hover ,div#player_ch_05:hover ,div#player_ch_06:hover ,div#player_ch_07:hover{
+    transform: scale(1.5,1.5);
+}
+
+
+img#player_img_00 ,img#player_img_01 ,img#player_img_02 ,img#player_img_03 ,
+img#player_img_04 ,img#player_img_05 ,img#player_img_06 ,img#player_img_07{
+    width: 100%;
+    height: 100%;
+}
+span#introduce_gura_sp , span#introduce_ame_sp , span#introduce_kiara_sp , span#introduce_ina_sp ,
+span#introduce_mori_sp {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+span#introduce_context_gura , span#introduce_context_ame , span#introduce_context_kiara ,
+span#introduce_context_ina , span#introduce_context_mori{
+    position: absolute;
+    top: 50px;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+}
+span#introduce_context_ina{
+    padding: 0 0 75px 0;
+}
+span#introduce_context_mori{
+    padding: 0 0 85px 0;
+}
+P#show_en , p#show_time , p#show_money{
+    display: none;
+    position: absolute;
+    top: 5%;
+    font-size: 2em;
+    z-index: 10;
+    text-align: center;
+    background-color: rgba(1, 178, 184, 0.205);
+    box-shadow: 0 0 5px 0 black;
+}
+P#show_en{
+    left: 49%;
+}
+p#show_time{
+    left: 5%;
+}
+p#show_money{
+    padding: 0 15px 0 15px;
+    left: 85%;
+}
+p#play_err{
+    display: none;
+    color: red;
+    position: absolute;
+    top: 630px;
+    left: 750px;
+}
+
+button#ok{
+    position: absolute;
+    top: 630px;
+    left: 870px;
+    width: 100px;
+    font-size: 40px;
+    pointer-events: none;
+    background-color: rgb(112, 111, 109);
+}
+button#esc{
+    position: absolute;
+    top: 10px;
+    left: 935px;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+}
+
+div#shop_{
+    display: none;
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    top: 10%;
+    left: -1200px;
+    z-index: 10;
+    transition: all 1s linear;
+}
+
+button#shop_esc{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 914px;
+    border: 0;
+    box-shadow: 0 0 5px 0 black;
+    background-color: rgb(236, 133, 133);
+}
+ul#shop_all{
+    display: none;
+    position: absolute;
+    /* background-color: rgba(37, 155, 170, 0.466); */
+    top: 200px;
+    left: 300px;
+    width: 200px;
+    height: 100px;
+    z-index: 30;
+}
+li#shop_home , li#shop_play , li#shop_skill{
+    
+    display: block;
+    position: absolute;
+    padding-top: 20px;
+    left: 10px;
+    background-color: rgb(236, 133, 133);
+    width: 150px;
+    height: 70px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 0 5px 0 black;
+    border: 5px double rgba(253, 253, 253, 0.315);
+    border-radius: 20px;
+    transition: all 1s ease-out;
+    z-index: 20;
+}
+li#shop_home{
+    top: 1000px;
+    /* top: 50px; */
+}
+li#shop_play{
+    top: 1000px;
+    /* top: 170px; */
+}
+li#shop_skill{
+    top: 1000px;
+    /* top: 290px; */
+}
+
+
+div#shopHome , div#shopPlay , div#shopSkill{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 47px;
+    width: 900px;
+    height: 750px;
+    border-radius: 30px;
+    border: 10px solid rgba(0, 0, 0, 0.11);
+    background-color: rgb(236, 220, 228);
+    transition: all 0.2s linear;
+}
+div#shopHome{
+    display: block;
+    overflow: hidden;
+}
+div#shopSkill{
+    display: block;
+    overflow: hidden;
+}
+div#shopPlay{
+    display: block;
+    overflow: hidden;
+}
+button#buyplay{
+    position: absolute;
+    top: 82%;
+    left: 33%;
+    width: 100px;
+    height: 50px;
+    z-index: 10;
+    font-size: 30px;
+    background-color: rgb(243, 180, 180);
+}
+li#shop_home_1 , li#shop_home_2 , ul#shop_Play{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(247, 181, 165);
+    transition: all 0.5s linear;
+}
+li#shop_home_2{
+    left: 100%;
+}
+ul#shop_Play{
+    transition: all 0.1s linear;
+    top: 30%;
+    width: 3000px;
+    height: 40%;
+}
+li#Play1 , li#Play2 , li#Play3 , li#Play4 , li#Play5{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+img#imgPlay1 , img#imgPlay2 , img#imgPlay3 , img#imgPlay4 , img#imgPlay5{
+    position: absolute;
+    top: 160px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s linear;
+}
+p#shopPlay_p {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+div#shopShow_skill{
+    position: absolute;
+    width: 80%;
+    top: 77%;
+    left: 10%;
+}
+img#shopShow_skill1 , img#shopShow_skill2 , img#shopShow_skill3 , img#shopShow_skill4{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 5px 0 black;
+}
+img#shopShow_skill2{
+    left: 30%;
+}
+img#shopShow_skill3{
+    left: 55%;
+}
+img#shopShow_skill4{
+    left: 80%;
+}
+div#skillIntroduce , div#shopSkill_introduce{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    background-color: white;
+    z-index: 10;
+}
+video#skillIntroduce_video{
+    width: 100%;
+    height: 80%;
+}
+p#skillIntroduce_p , p#shopSkill_introduce_p{
+    margin: auto;
+    width: 80%;
+    padding: 5px;
+}
+div#small1 , div#small2{
+    position: absolute;
+    top: 90%;
+    left: 47%;
+    width: 1px;
+    height: 1px;
+    border: 10px solid black;
+    transition: all 1s linear;
+}
+ul#shop_Skill_ul{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 1270px;
+    height: 50%;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.05s linear;
+}
+li#shop_skill1 , li#shop_skill2 , li#shop_skill3 ,
+li#shop_skill4 , li#shop_skill5{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    width: 400px;
+    height: 45%;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 15px;
+}
+img#shop_skill_img1 , img#shop_skill_img2 , img#shop_skill_img3,
+img#shop_skill_img4 , img#shop_skill_img5{
+    margin: 15px;
+    width: 30%;
+    height: 80%;
+}
+button#shop_skill_left1 , button#shop_skill_left2 , button#shop_skill_left3,
+button#shop_skill_left4 , button#shop_skill_left5{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    border: 20px solid;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: transparent rgb(231, 152, 152) transparent transparent;
+}
+button#shop_skill_left1:active , button#shop_skill_right1:active ,
+button#shop_skill_left2:active , button#shop_skill_right2:active ,
+button#shop_skill_left3:active , button#shop_skill_right3:active ,
+button#shop_skill_left4:active , button#shop_skill_right4:active ,
+button#shop_skill_left5:active , button#shop_skill_right5:active{
+    top: 11%;
+}
+button#shop_skill_right1 , button#shop_skill_right2 , button#shop_skill_right3,
+button#shop_skill_right4 , button#shop_skill_right5{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10%;
+    left: 88.5%;
+    border: 20px solid;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: transparent transparent transparent rgb(231, 152, 152);
+}
+p#shop_skill_num1 , p#shop_skill_num2 , p#shop_skill_num3 , 
+p#shop_skill_num4 , p#shop_skill_num5{
+    position: absolute;
+    top: 6.5%;
+    left: 0;
+    background-color: rgb(233, 217, 217);
+    width: 100px;
+    height: 50px;
+    margin: 0 15% 0 60%;
+    text-align: center;
+    font-size: 50px;
+}
+p#shop_skill_all1 , p#shop_skill_all2 , p#shop_skill_all3 , 
+p#shop_skill_all4 , p#shop_skill_all5{
+    position: absolute;
+    top: 40%;
+    left: 64%;
+}
+button#shop_skill_buyMoney1 , button#shop_skill_buyMoney2 , button#shop_skill_buyMoney3 ,
+button#shop_skill_buyMoney4 , button#shop_skill_buyMoney5{
+    position: absolute;
+    top: 75%;
+    left: 55%;
+    width: 35%;
+    height: 20%;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: white;
+}
+ul#playAll_skill{
+    position: absolute;
+    top: 78%;
+    left: 9.5%;
+    width: 80%;
+    height: 18%;
+    background-color: white;
+}
+li#playAll_skill1 , li#playAll_skill2 , li#playAll_skill3,
+li#playAll_skill4 , li#playAll_skill5{
+    position: relative;
+    top: 7px;
+    left: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 16%;
+    height: 80%;
+    border: 3px solid black;
+    overflow: hidden;
+}
+img#playAll_skill_img1 , img#playAll_skill_img2 ,img#playAll_skill_img3 ,
+img#playAll_skill_img4 , img#playAll_skill_img5{
+    width: 100%;
+    height: 100%;
+    transform: scale(2.0);
+    transition: all 0.5s linear;
+}
+button#shop_skill_buyMoney1:active , button#shop_skill_buyMoney2:active , button#shop_skill_buyMoney3:active,
+button#shop_skill_buyMoney4:active , button#shop_skill_buyMoney5:active{
+    top: 76.5%;
+}
+div#small2{
+    left: 50%;
+    border: 10px solid white;
+}
+li#shopMark{
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(33, 222, 236);
+    z-index: -10;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 black;
+    transition: all 0.5s ease-out;
+}
+li#smallMark{
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 200px;
+    width: 1px;
+    height: 1px;
+    border: 20px solid;
+    border-color: transparent transparent transparent rgb(236, 133, 133);
+    z-index: -20;
+    transition: all 0.5s ease-out;
+}
+div#begin {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 12.7%;
+    width: 40%;
+    height: 40%;
+    border: 10px solid rgba(51, 200, 226, 0.616);
+    border-radius: 50px;
+    background-color: rgb(9, 160, 187);
+    z-index: 2;
+}
+audio#music{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div#begin_{
+    width: 38%;
+    height: 60%;
+    background-color: rgba(0, 255, 106, 0.63);
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 3px solid rgb(25, 240, 255);
+    border-radius: 1000px;
+}
+
+button#choose , button#shop{
+    position: absolute;
+    top: 75%;
+    left: 47.5%;
+    width: 200px;
+    height: 100px;
+    border: 3px solid rgba(1, 250, 229, 0.719);
+    color: white;
+    font-size: 50px;
+    border-radius: 20px;
+    z-index: 3;
+    box-shadow: 0 0 6px 0 black;
+    background-color: rgb(85, 85, 85);
+}
+
+button#shop{
+    display: block;
+}
+
+button#shop{
+    top: 87%
+}
+button#choose:hover , button#shop:hover{
+    background-color: rgba(228, 225, 230, 0.452);
+}
+div#buyCk, div#buyCk1 , div#buy_err , div#buy_err1{
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 42.5%;
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    border: 3px solid rgb(231, 176, 176);
+    z-index: 10;
+}
+div#buy_err{
+    transition: all 1s linear;
+    animation-name: err;
+    animation-duration: 0.2s;
+    /* animation-direction: normal;
+    animation-fill-mode: backwards; */
+}
+@keyframes err {
+    0%{
+        left: 42.5%;
+    }
+    20%{
+        left: 41.5%;
+    }
+    40%{
+        left: 43.5%;
+    }
+    60%{
+        left: 41.5%;
+    }
+    80%{
+        left: 43.5%;
+    }
+    100%{
+        left: 42.5%;
+    }
+}
+div#buyplay1 , div#buyplay2 , div#buyplay3 , div#buyplay4 , div#buyplay5{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+button#buyCk_ok , button#buyCk_no , button#buy_err_btu,
+button#buyCk_ok1, button#buyCk_no1 , button#buy_err_btu1{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    font-size: 30px;
+    background-color: white;
+}
+p#buyCk_p , p#buyCk_p1{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 33.5%;
+}
+p#buy_err_p , p#buy_err_p1{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 20%;
+    left: 43.5%;
+    margin: auto;
+}
+button#buyCk_no , button#buyCk_no1{
+    top: 0;
+    left: 88%;
+    width: 12%;
+    height: 20%;
+}
+div#shopSkill > p#shopPlay_p{
+    top: 19%;
+}
+div#env{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0,0);
+}
+img#envir{
+    position: absolute;
+    width: 5000px;
+    height: 5000px;
+    top: -2100px;
+    left: -1550px;
+    z-index: -1;
+}
+
+
+div.sdw{
+    display: block;
+}
+div#skill_all{
+    display: none;
+    position: absolute;
+    top: 87%;
+    left: 27.5%;
+    width: 500px;
+    height: 120px;
+}
+div#skill01 , div#skill02 , div#skill03 , div#skill04{
+    display: none;
+    position: absolute;
+    top: 88%;
+    left: 41%;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+div#skill02{
+    left: 46%;
+}
+div#skill03{
+    left: 51%;
+}
+div#skill04{
+    left: 56%;
+}
+
+img#skill01_img , img#skill02_img , img#skill03_img , img#skill04_img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+button#skill01_1 , button#skill02_1 , button#skill03_1 , button#skill04_1{
+    background-color: rgba(101, 156, 228, 0.671);
+    display: none;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    line-height: 68px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 10;
+    transition: all 0.1s ease;
+}
+
+p#skill01_2 , p#skill02_2 , p#skill03_2 , p#skill04_2{
+    display: none;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border: 8px solid;
+    border-color: black transparent transparent transparent;
+    top: -25px;
+    left: 27px;
+    animation-name: skill_all;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: inherit;
+}
+p#skill01_3 , p#skill02_3 , p#skill03_3 , p#skill04_3{
+    position: absolute;
+    top: 70px;
+    left: -4px;
+    font-size: 23px;
+}
+
+@keyframes skill_all{
+    0%{
+        top:-25px;
+    }
+    100%{
+        top:-19px;
+    }
+}
+canvas#can , canvas#can0 , canvas#can0_1 , canvas#can0_2 , canvas#can0_3 , canvas#can0_3_1 , canvas#can0_4 , canvas#can0_4_1 ,
+canvas#can1 , canvas#can2 , canvas#can3 , canvas#can4_1 , canvas#can4_2 ,
+canvas#show_atk , canvas#enemyATK{
+    display: block;
+    background-color: rgba(0, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 5px solid rgb(238, 138, 155);
+}
+
+canvas#show_atk , canvas#can{
+    z-index: 1;
+}
+canvas#can0_2{
+    z-index: 2;
+}
+canvas#can4_2{
+    z-index: 1;
+}
+p.err{
+    display: none;
+    background-color: bisque;
+    line-height: 50%;
+    font-size: 4px;
+}
+@media screen and (max-width:1900px) {
+    p.err{
+        display: block;
+    }
+    canvas#can{
+        display: none;
+    }
+    canvas#can0{
+        display: none;
+    }
+    canvas#can1{
+        display: none;
+    }
+}
+
+
+
